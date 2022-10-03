@@ -1,0 +1,12 @@
+{
+  "nuxt.isNuxtApp": true,
+  "cSpell.words": [
+    "daisyui",
+    "lintfix",
+    "nuxi",
+    "nuxt",
+    "nuxtjs",
+    "rubocop",
+    "tailwindcss"
+  ],
+}
