@@ -1,12 +1,10 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      baseURL: process.env.NODE_ENV === 'production' ? "http://localhost:8888" : "http://localhost:8888",
-    },
-  },
+  ssr: false, // SPAモード
+  target:"static",
+  runtimeConfig: {},
   css: ["@/assets/styles/tailwind.css"],
   build: {
     postcss: {
