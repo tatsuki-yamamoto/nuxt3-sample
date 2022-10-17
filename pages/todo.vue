@@ -3,5 +3,5 @@ useHead({ title: 'TODO' });
 </script>
 
 <template>
-  <views-todo />
+  <views-todo-main />
 </template>

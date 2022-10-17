@@ -3,9 +3,9 @@ import { SelectItem } from '~~/types/select-item';
 
 const props = withDefaults(
   defineProps<{
-    modelValue: string | number;
-    label: string;
-    items: SelectItem[];
+    modelValue?: string | number;
+    label?: string;
+    items?: SelectItem[];
   }>(),
   {
     modelValue: '',
@@ -26,7 +26,9 @@ const updateValue = (event: Event) => {
       <span class="label-text">{{ label }}</span>
     </label>
     <select class="select select-bordered">
-      <option v-for="item in items" :key="item.value" :selected="item.value === modelValue" @change="updateValue">{{ item.name }}</option>
+      <option v-for="item in items" :key="item.value" :selected="item.value === modelValue" @change="updateValue">
+        {{ item.name }}
+      </option>
     </select>
   </div>
 </template>

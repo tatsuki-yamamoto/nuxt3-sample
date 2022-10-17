@@ -1,0 +1,10 @@
+query findTodos {
+  findTodos {
+    id
+    title
+    description
+    status
+    createdAt
+    updatedAt
+  }
+}

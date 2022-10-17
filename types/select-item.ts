@@ -1,4 +1,4 @@
-export interface SelectItem {
+export type SelectItem = {
   value: string | number;
   name: string;
 }

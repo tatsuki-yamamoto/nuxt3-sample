@@ -1,0 +1,9 @@
+overwrite: true # 出力するファイルを毎度上書きする
+schema: "http://localhost:3000/graphql" # 自分のendpoint
+documents: graphql/**/*.graphql
+generates:
+  api/generated/types.ts: # 出力するファイル名
+    plugins: # 必要となるプラグイン
+      - typescript # TypeScript の型生成する
+      - typescript-operations # GraphQL のクエリとスキーマを元に TypeScript の型を自動生成する
+      - typed-document-node

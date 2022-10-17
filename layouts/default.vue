@@ -1,10 +1,10 @@
 <template>
   <div>
-    <the-header></the-header>
+    <templates-header></templates-header>
     <main>
       <slot />
     </main>
-    <the-footer></the-footer>
+    <templates-footer></templates-footer>
   </div>
 </template>
 

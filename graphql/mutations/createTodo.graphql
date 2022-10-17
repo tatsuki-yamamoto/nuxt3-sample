@@ -1,0 +1,10 @@
+mutation createTodo($todo: CreateTodoDto!) {
+  createTodo(todo: $todo){
+    id
+    title
+    description
+    status
+    createdAt
+    updatedAt
+  }
+}

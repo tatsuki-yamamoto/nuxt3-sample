@@ -4,12 +4,13 @@
     "build": "nuxi build",
     "dev": "PORT=8080 nuxi dev",
     "generate": "nuxi generate",
-    "preview": "nuxi preview",
+    "preview": "PORT=8080 nuxi preview",
     "lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
     "@mdi/font": "^7.0.96",
@@ -31,11 +32,16 @@
     "typescript": "^4.8.2"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.6",
+    "@apollo/client": "^3.7.0",
+    "@graphql-codegen/cli": "^2.13.6",
+    "@graphql-codegen/typed-document-node": "^2.3.4",
+    "@graphql-codegen/typescript": "^2.7.4",
+    "@graphql-codegen/typescript-operations": "^2.5.4",
     "@nuxtjs/tailwindcss": "^5.3.2",
-    "@vue/apollo-composable": "^4.0.0-alpha.17",
-    "@vue/apollo-ssr": "^4.0.0-alpha.17",
+    "@vue/apollo-composable": "^4.0.0-beta.1",
+    "@vue/apollo-util": "^4.0.0-alpha.18",
     "daisyui": "^2.25.0",
-    "graphql": "^16.5.0"
+    "graphql": "^16.5.0",
+    "vue-apollo": "^3.1.0"
   }
 }

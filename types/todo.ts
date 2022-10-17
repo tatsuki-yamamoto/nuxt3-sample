@@ -1,41 +1,27 @@
+import { Todo, TodoStatus } from '~~/api/generated/types';
 import { SelectItem } from '~~/types/select-item';
-
-export enum TodoStatus {
-  NEW,
-  IN_PROGRESS,
-  COMPLETE,
-}
 
 export const statusSelectItems: SelectItem[] = [
   {
-    value: TodoStatus.NEW,
+    value: TodoStatus.New,
     name: 'NEW',
   },
   {
-    value: TodoStatus.IN_PROGRESS,
+    value: TodoStatus.InProgress,
     name: 'IN_PROGRESS',
   },
   {
-    value: TodoStatus.COMPLETE,
+    value: TodoStatus.Complete,
     name: 'COMPLETE',
   },
 ];
-
-export interface Todo {
-  id: string;
-  title: string;
-  description: string;
-  status: TodoStatus;
-  createdAt: Date;
-  updatedAt: Date;
-}
 
 export const defaultTodo = (): Todo => {
   return {
     id: "",
     title: "",
     description: "",
-    status: TodoStatus.NEW,
+    status: TodoStatus.New,
     createdAt: new Date,
     updatedAt: new Date
   }

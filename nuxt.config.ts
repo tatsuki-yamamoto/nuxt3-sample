@@ -14,6 +14,10 @@ export default defineNuxtConfig({
         },
       },
     },
+    transpile: [
+      '@apollo/client',
+      'ts-invariant/process',
+    ],
   },
   vite: {
     define: {
